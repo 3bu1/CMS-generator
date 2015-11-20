@@ -13,10 +13,10 @@ class Database {
 	
 	*/
 	
-	public  $dbhost = "mysql:dbname=25thcraft;host=localhost";
+	public  $dbhost = "mysql:dbname=apt;host=localhost";
 	public  $dbuser = "tribhuvan";
 	public  $dbpass = "123456";
-	public  $dbname = "25thcraft";
+	public  $dbname = "apt";
 	public  $connection;
 	public  $selectdb;
 	public  $isConnected;
