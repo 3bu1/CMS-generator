@@ -190,6 +190,10 @@ $db = new Database(); // $db is an object for Database class
 			return $e;
 		}
 	}
+	
+	
+	
+		// For Current Month
 Public function selectCurrentDate($tablename,$Received_Date){
 		
 		$db = new Database(); //$db is an object for Database Class
