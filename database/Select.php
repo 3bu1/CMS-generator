@@ -190,7 +190,25 @@ $db = new Database(); // $db is an object for Database class
 			return $e;
 		}
 	}
-
+Public function selectCurrentDate($tablename,$Received_Date){
+		
+		$db = new Database(); //$db is an object for Database Class
+		$con = $db->connection(); // Creating connection $con using $db object
+		try{
+			$sql = "SELECT * from ".$tablename." where MONTH(".$Received_Date.") = MONTH(CURDATE())";
+			echo $sql;
+			$stmt = $con->prepare($sql);
+			$stmt->execute();
+			$output = array();
+			$output = $stmt->fetchAll(PDO::FETCH_ASSOC); // fetches everything in an array
+			
+			return $output;
+		}
+		catch(Exception $e){
+			return $e;
+		}
+		
+	}
 
 
 
